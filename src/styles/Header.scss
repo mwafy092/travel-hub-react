@@ -1,0 +1,20 @@
+.header {
+    background-image: url('./hero.jpg');
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+        margin: 1rem 0;
+        font-weight: 700;
+    }
+    p {
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+}
