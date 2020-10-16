@@ -1,0 +1,33 @@
+.city {
+    padding: 1rem;
+    label,
+    select {
+        display: block;
+    }
+    label {
+        font-weight: 700;
+        color: #0e4a60;
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+    select {
+        color: #0e4a60;
+        width: 300px;
+        height: 40px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding-left: 0.5rem;
+        border-radius: 0.2rem;
+        box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.1);
+        transition: all 200ms ease-in-out;
+        background-color: #fff;
+        &:hover {
+            box-shadow: none;
+            border: 1px solid #f2795d;
+            color: #f2795d;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
