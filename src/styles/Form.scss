@@ -1,0 +1,36 @@
+.country,
+.city,
+.area {
+    label,
+    select {
+        display: block;
+    }
+
+    label {
+        color: #f16745;
+        font-size: 1rem;
+        font-weight: 900;
+        margin: 0.5rem 0.2rem;
+    }
+    select {
+        width: 300px;
+        border: 1px solid #f16745;
+        background-color: #fff;
+        color: #f16745;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 0.5rem;
+        text-transform: lowercase;
+        border-radius: 0.3rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.1);
+        transition: all 250ms ease-in-out;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/City.scss';
 const Area = (props) => {
     const [areas, setAreas] = useState([]);
     const getArea = async () => {

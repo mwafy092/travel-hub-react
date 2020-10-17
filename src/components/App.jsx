@@ -2,12 +2,12 @@ import React from 'react';
 import Nav from './Nav';
 import Header from './Header';
 import Country from './Country';
+import Photos from './Photos';
 import '../styles/App.scss';
 import Airplane from './assets/airplane-travel.svg';
 import Balloon from './assets/hot-air-balloon.svg';
 import Tropical from './assets/tropical.svg';
 import Cruise from './assets/cruise.svg';
-
 const App = () => {
     return (
         <div className='app'>
@@ -35,7 +35,12 @@ const App = () => {
                 </div>
 
                 <div className='country-data'>
-                    <Country />
+                    <div className='form'>
+                        <Country />
+                    </div>
+                    <div className='images'>
+                        <Photos />
+                    </div>
                 </div>
             </div>
         </div>

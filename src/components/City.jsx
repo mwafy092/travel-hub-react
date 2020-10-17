@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/City.scss';
 import Area from './Area';
 const City = (props) => {
     const [cities, setCities] = useState([]);
@@ -27,13 +26,18 @@ const City = (props) => {
                 id='city'
                 onChange={(e) => setSelect(e.target.value)}
             >
+                <option value='select city'>select city</option>
                 {cities.map((city) => (
                     <option value={city.id} key={city.id}>
                         {city.attributes.name}
                     </option>
                 ))}
             </select>
-            <Area cityId={cityId} countryId={props.id} />
+            {props.id === '56' ? (
+                <Area cityId={cityId} countryId={props.id} />
+            ) : (
+                ''
+            )}
         </div>
     );
 };

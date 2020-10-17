@@ -1,0 +1,28 @@
+.photo {
+    position: relative;
+    margin: 1rem;
+    p {
+        position: absolute;
+        color: #fff;
+        font-weight: 900;
+        bottom: 2.5rem;
+        left: 0.5rem;
+        font-size: 0.9rem;
+    }
+    i {
+        position: absolute;
+        bottom: 1rem;
+        font-size: 1.2rem;
+        color: #ea5655;
+        left: 0.5rem;
+        span {
+            color: #fff;
+            font-size: 0.9rem;
+        }
+    }
+    img {
+        width: 250px;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.2);
+    }
+}

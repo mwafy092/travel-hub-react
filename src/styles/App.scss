@@ -1,6 +1,5 @@
 .container {
-    background-color: #f5e4dc;
-    min-height: 100vh;
+    background-color: #fff;
     z-index: 1;
     margin-top: -5rem;
     border-radius: 4rem 4rem 0 0;
@@ -11,7 +10,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 1rem;
+        margin: 3rem 1rem;
         .icon {
             text-align: center;
             margin: 0 3rem;
@@ -24,6 +23,23 @@
                 font-weight: 600;
                 font-size: 0.8rem;
             }
+        }
+    }
+    .country-data {
+        display: grid;
+        grid-template-areas: 'form images';
+        grid-template-columns: repeat(2, 50vw);
+        margin: 5rem 0;
+        .form {
+            grid-area: form;
+            display: grid;
+            place-content: center;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: images;
         }
     }
 }

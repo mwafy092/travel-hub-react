@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/Country.scss';
 import City from './City';
+import '../styles/Form.scss';
 
 const Country = () => {
     const [countries, setCountries] = useState([]);
