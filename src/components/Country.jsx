@@ -15,10 +15,10 @@ const Country = () => {
             .then((response) => response.json())
             .then((data) => setCountries(data.data));
     };
+
     useEffect(() => {
         getCountry();
     }, [countryId]);
-
     const setSelect = (id) => {
         setCountryId(id);
     };
@@ -35,6 +35,7 @@ const Country = () => {
     useEffect(() => {
         getCountryById();
     }, [countryId]);
+
     return (
         <div className='country'>
             <label htmlFor='country'>Country</label>

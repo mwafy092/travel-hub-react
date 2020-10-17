@@ -12,12 +12,12 @@ const City = (props) => {
             .then((response) => response.json())
             .then((data) => setCities(data.data));
     };
-    useEffect(() => {
-        getCity();
-    }, [props.id]);
     const setSelect = (id) => {
         setCityId(id);
     };
+    useEffect(() => {
+        getCity();
+    }, [props.id]);
     return (
         <div className='city'>
             <label htmlFor='city'>city</label>
@@ -26,13 +26,28 @@ const City = (props) => {
                 id='city'
                 onChange={(e) => setSelect(e.target.value)}
             >
-                <option value='select city'>select city</option>
+                <option value='select_city'>select city</option>
                 {cities.map((city) => (
                     <option value={city.id} key={city.id}>
                         {city.attributes.name}
                     </option>
                 ))}
             </select>
+            {props.id ? (
+                cityId ? (
+                    ''
+                ) : (
+                    <p style={{ color: 'red' }}>
+                        <i
+                            className='fas fa-bomb'
+                            style={{ fontSize: '1.5rem', margin: '1rem' }}
+                        ></i>
+                        please select city
+                    </p>
+                )
+            ) : (
+                ''
+            )}
             {props.id === '56' ? (
                 <Area cityId={cityId} countryId={props.id} />
             ) : (

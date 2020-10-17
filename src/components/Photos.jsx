@@ -4,12 +4,10 @@ import { CountryContext } from './CountryContext';
 const Photos = () => {
     const [country, setCountry] = useContext(CountryContext);
     const [photos, setPhotos] = useState([]);
-    console.log(country);
     const getPhotos = async () => {
         const API_KEY = `18025631-21fc69eb9242d4f0ccc554e3b`;
-        const _country = await country;
-        console.log(_country[0].country);
-        const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${_country[0].country}&image_type=photo&orientation=vertical`;
+        const _country = await country[0].country;
+        const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${_country}&image_type=photo&orientation=vertical`;
 
         const response = await fetch(URL)
             .then((response) => response.json())
@@ -22,6 +20,17 @@ const Photos = () => {
     useEffect(() => {
         getPhotos();
     }, [country]);
+    if (photos[0] === undefined) {
+        return (
+            <p style={{ color: 'red' }}>
+                <i
+                    className='fas fa-bomb'
+                    style={{ fontSize: '1.5rem', margin: '1rem' }}
+                ></i>
+                no photos to show
+            </p>
+        );
+    }
     return (
         <React.Fragment>
             {photos.map((photo) => (
