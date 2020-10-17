@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import City from './City';
-import '../styles/Form.scss';
 
+import '../styles/Form.scss';
+import { CountryContext } from './CountryContext';
 const Country = () => {
+    const [country, setCountry] = useContext(CountryContext);
     const [countries, setCountries] = useState([]);
     const [countryId, setCountryId] = useState();
     const getCountry = async () => {
@@ -15,11 +17,24 @@ const Country = () => {
     };
     useEffect(() => {
         getCountry();
-    }, []);
+    }, [countryId]);
 
     const setSelect = (id) => {
         setCountryId(id);
     };
+
+    const getCountryById = () => {
+        countries.map((country) => {
+            if (country.id === countryId) {
+                setCountry((prevData) => [
+                    { country: country.attributes.name },
+                ]);
+            }
+        });
+    };
+    useEffect(() => {
+        getCountryById();
+    }, [countryId]);
     return (
         <div className='country'>
             <label htmlFor='country'>Country</label>

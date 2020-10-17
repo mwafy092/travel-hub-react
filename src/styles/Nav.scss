@@ -1,13 +1,14 @@
 nav {
-    background-color: #fff;
+    background-color: #124870;
     min-height: 70px;
     display: grid;
     place-content: center;
     position: fixed;
     width: 100vw;
     box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.2);
+    z-index: 100;
     .logo {
-        color: #ea5655;
+        color: #fff;
         font-weight: 900;
         font-size: 1.5rem;
     }

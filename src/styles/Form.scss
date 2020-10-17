@@ -1,22 +1,23 @@
 .country,
 .city,
 .area {
+    z-index: 100;
     label,
     select {
         display: block;
     }
 
     label {
-        color: #f16745;
+        color: #124870;
         font-size: 1rem;
         font-weight: 900;
         margin: 0.5rem 0.2rem;
     }
     select {
         width: 300px;
-        border: 1px solid #f16745;
+        border: 1px solid #124870;
         background-color: #fff;
-        color: #f16745;
+        color: #124870;
         font-weight: 600;
         font-size: 1rem;
         padding: 0.5rem;
@@ -24,7 +25,7 @@
         border-radius: 0.3rem;
         margin-bottom: 2rem;
         cursor: pointer;
-        box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.1);
+        box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.1);
         transition: all 250ms ease-in-out;
         &:focus {
             outline: none;
