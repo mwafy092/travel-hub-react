@@ -33,7 +33,7 @@ const City = (props) => {
     // error checking for city
     const errorChecking = () => {
         if (props.id) {
-            if (cityId === null) {
+            if (cityId === null || cityId === '0') {
                 return (
                     <div className='error' style={{ display: 'center' }}>
                         <p style={{ color: '#56C0A6', fontWeight: '600' }}>
@@ -61,6 +61,7 @@ const City = (props) => {
                 name='city'
                 id='city'
                 onChange={(e) => setSelect(e.target.value)}
+                className='animate5'
             >
                 <option value='0'>select city</option>
                 {cities.map((city) => (

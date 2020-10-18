@@ -46,13 +46,19 @@ const Country = () => {
         getCountryById();
     }, [countryId]);
 
+    const renderCity = () => {
+        if (countryId) {
+            return <City id={countryId} />;
+        }
+    };
     return (
-        <div className='country'>
+        <div className='country '>
             <label htmlFor='country'>Country</label>
             <select
                 name='country'
                 id='country'
                 onChange={(e) => setSelect(e.target.value)}
+                className='animate5'
             >
                 <option value='select country'>Select Country</option>
                 {countries.map((country) => (
@@ -61,7 +67,7 @@ const Country = () => {
                     </option>
                 ))}
             </select>
-            <City id={countryId} />
+            {renderCity()}
         </div>
     );
 };

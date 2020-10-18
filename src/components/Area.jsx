@@ -21,7 +21,7 @@ const Area = (props) => {
     return (
         <div className='area'>
             <label htmlFor='area'>Area</label>
-            <select name='area' id='area'>
+            <select name='area' id='area' className='animate5'>
                 {areas.map((area) => (
                     <option value={area.attributes.name} key={area.id}>
                         {area.attributes.name}

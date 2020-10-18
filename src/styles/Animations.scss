@@ -1,25 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #f5f6f8;
-}
-
-code {
-    font-family: 'Montserrat', sans-serif;
-}
-
 .animate1 {
-    animation: fadeIn1 4s forwards;
+    animation: fadeIn1 3s forwards;
 }
 
 @keyframes fadeIn1 {
@@ -47,7 +27,7 @@ code {
     }
 }
 .animate3 {
-    animation: fadeIn3 4s forwards;
+    animation: fadeIn3 3s forwards;
 }
 
 @keyframes fadeIn3 {
@@ -61,7 +41,7 @@ code {
     }
 }
 .animate4 {
-    animation: fadeIn4 4s forwards;
+    animation: fadeIn4 3s forwards;
 }
 
 @keyframes fadeIn4 {
@@ -72,19 +52,5 @@ code {
     100% {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-.animate5 {
-    animation: fadeIn5 4s forwards;
-}
-
-@keyframes fadeIn5 {
-    0% {
-        opacity: 0;
-        transform: translateZ(5em);
-    }
-    100% {
-        opacity: 1;
-        transform: translateZ(0);
     }
 }

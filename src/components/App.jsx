@@ -7,12 +7,12 @@ import Services from './Services';
 import '../styles/App.scss';
 import { CountryProvider } from './CountryContext';
 import Robot from './assets/error.svg';
-import Linkedin from './assets/linkedin.svg';
 const App = () => {
     /**
      * This is the root component
      * all components included inside context api provider calling CountryProvider
      */
+
     return (
         <CountryProvider>
             <div className='app'>
@@ -21,8 +21,16 @@ const App = () => {
 
                 <div className='container'>
                     <Services />
+
                     <div className='country-data'>
                         <div className='form'>
+                            <div className='user'>
+                                <p>
+                                    select country then city, if egypt select
+                                    area
+                                </p>
+                                <img src={Robot} alt='' />
+                            </div>
                             <Country />
                         </div>
                         <div className='images'>
@@ -35,15 +43,7 @@ const App = () => {
                     </button>
                     <div className='color-red'></div>
                     <div className='color-yellow'></div>
-                    <div className='robot'>
-                        <img src={Robot} alt='' />
-                        <a
-                            href='https://www.linkedin.com/in/mwafy/'
-                            target='_blank'
-                        ></a>
-                    </div>
                 </div>
-
                 <footer>Travel Hub Created By Mwafy @2020</footer>
             </div>
         </CountryProvider>

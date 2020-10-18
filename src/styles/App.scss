@@ -1,17 +1,37 @@
 .app {
     .container {
         background-color: #f5f6f8;
-        z-index: 1;
+        z-index: 98;
         margin-top: -5rem;
         border-radius: 4rem 4rem 0 0;
         box-shadow: 0 -20px 20px rgba($color: #000000, $alpha: 0.2);
         padding: 1rem;
+        .user {
+            text-align: center;
+            z-index: 96;
+            p {
+                width: 200px;
+                margin: 0.5rem auto;
+                border: 1px solid #f16745;
+                padding: 1rem;
+                border-radius: 0 2rem 0rem 2rem;
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: #444;
+                box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
+            }
+            img {
+                width: 100px;
+                margin-left: 10rem;
+            }
+        }
         .country-data {
             display: grid;
             grid-template-areas: 'form images';
             grid-template-columns: repeat(2, 1fr);
             margin: 5rem 0;
             position: relative;
+            z-index: 94;
             .form {
                 grid-area: form;
                 display: grid;
@@ -23,7 +43,6 @@
                 align-items: center;
                 flex-wrap: wrap;
                 grid-area: images;
-                z-index: 3;
             }
         }
         button {
@@ -41,6 +60,10 @@
             cursor: pointer;
             span {
                 margin-right: 1rem;
+            }
+            transition: all 250ms ease-in-out;
+            &:hover {
+                box-shadow: none;
             }
         }
         .color-red {
@@ -72,7 +95,7 @@
             box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.2);
             position: fixed;
             bottom: 4rem;
-            right: 3rem;
+            right: 1rem;
             z-index: 100;
             cursor: pointer;
             img {
@@ -97,6 +120,7 @@
     .app {
         .container {
             border-radius: 2rem 2rem 0 0;
+
             .country-data {
                 grid-template-areas:
                     'form'
@@ -135,7 +159,7 @@
                 width: 60px;
                 height: 60px;
                 bottom: 1rem;
-                right: 2rem;
+                right: 1rem;
                 img {
                     width: 40px;
                 }

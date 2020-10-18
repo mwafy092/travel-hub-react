@@ -12,19 +12,19 @@ const Services = () => {
         <div className='services'>
             <p className='services'>our services</p>
             <div className='travel-icons'>
-                <div className='icon'>
+                <div className='icon animate3'>
                     <img src={Airplane} alt='' />
                     <p>travel anywhere</p>
                 </div>
-                <div className='icon'>
+                <div className='icon animate3'>
                     <img src={Cruise} alt='' />
                     <p>Cruise</p>
                 </div>
-                <div className='icon'>
+                <div className='icon animate4'>
                     <img src={Balloon} alt='' />
                     <p>air balloon</p>
                 </div>
-                <div className='icon'>
+                <div className='icon animate4'>
                     <img src={Tropical} alt='' />
                     <p>beautiful beaches</p>
                 </div>
