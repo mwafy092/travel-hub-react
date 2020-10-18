@@ -37,6 +37,7 @@ const App = () => {
                             <Photos />
                         </div>
                     </div>
+
                     <a
                         href='mailto:mwafy092@gmail.com?subject=Trip Reservation'
                         target='_blank'
