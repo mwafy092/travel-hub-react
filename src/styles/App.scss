@@ -10,6 +10,7 @@
             text-align: center;
             z-index: 96;
             p {
+                background-color: #f3927a;
                 width: 200px;
                 margin: 0.5rem auto;
                 border: 1px solid #f16745;
@@ -17,8 +18,12 @@
                 border-radius: 0 2rem 0rem 2rem;
                 font-size: 0.9rem;
                 font-weight: 600;
-                color: #444;
+                color: #f5f6f8;
                 box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
+                transition: all 200ms ease-in-out;
+                &:hover {
+                    box-shadow: none;
+                }
             }
             img {
                 width: 100px;
@@ -45,25 +50,33 @@
                 grid-area: images;
             }
         }
-        button {
-            display: block;
-            margin: 2rem auto;
-            width: 300px;
-            font-size: 1.5rem;
-            padding: 0.7rem 4rem;
-            font-weight: 700;
-            background-color: #f16745;
-            color: #fff;
-            border: 1px solid #f16745;
-            border-radius: 1rem 1rem 0 0;
-            box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.2);
-            cursor: pointer;
-            span {
-                margin-right: 1rem;
-            }
-            transition: all 250ms ease-in-out;
-            &:hover {
-                box-shadow: none;
+        a {
+            text-decoration: none;
+            button {
+                display: block;
+                margin: 2rem auto;
+                width: 300px;
+                font-size: 1.5rem;
+                padding: 0.7rem 4rem;
+                font-weight: 700;
+                background-color: #f16745;
+                color: #fff;
+                border: 1px solid #f16745;
+                border-radius: 1rem;
+                box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.2);
+                cursor: pointer;
+                span {
+                    margin-right: 1rem;
+                }
+                transition: all 300ms ease-in-out;
+                &:hover {
+                    box-shadow: none;
+                    background-color: #fff;
+                    color: #f16745;
+                }
+                &:focus {
+                    outline: none;
+                }
             }
         }
         .color-red {

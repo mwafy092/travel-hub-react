@@ -14,10 +14,8 @@
     margin: 3rem 1rem;
     .icon {
         z-index: 80;
-        text-align: center;
-        margin: 0 3rem;
         img {
-            width: 50px;
+            width: 60px;
         }
         p {
             margin: 0.5rem 0;
@@ -34,13 +32,13 @@
     }
     .travel-icons {
         margin: 1rem 0;
+        justify-content: space-between;
         .icon {
-            margin: 0;
             img {
                 width: 40px;
             }
             p {
-                font-size: 0.8rem;
+                font-size: 0.7rem;
                 width: 50px;
             }
         }

@@ -26,7 +26,7 @@ const App = () => {
                         <div className='form'>
                             <div className='user'>
                                 <p>
-                                    select country then city, if egypt select
+                                    select country then city and if egypt select
                                     area
                                 </p>
                                 <img src={Robot} alt='' />
@@ -37,10 +37,15 @@ const App = () => {
                             <Photos />
                         </div>
                     </div>
-                    <button>
-                        <span>Book now</span>
-                        <i className='fas fa-money-bill-wave'></i>
-                    </button>
+                    <a
+                        href='mailto:mwafy092@gmail.com?subject=Trip Reservation'
+                        target='_blank'
+                    >
+                        <button>
+                            <span>Book now</span>
+                            <i className='fas fa-money-bill-wave'></i>
+                        </button>
+                    </a>
                     <div className='color-red'></div>
                     <div className='color-yellow'></div>
                 </div>

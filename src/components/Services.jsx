@@ -1,9 +1,10 @@
 import React from 'react';
 import '../styles/Services.scss';
-import Airplane from './assets/airplane-travel.svg';
-import Balloon from './assets/hot-air-balloon.svg';
-import Tropical from './assets/tropical.svg';
-import Cruise from './assets/cruise.svg';
+import Car from './assets/car.svg';
+import Hotel from './assets/hotel.svg';
+import Flight from './assets/flight.svg';
+import Trip from './assets/trip.svg';
+
 const Services = () => {
     /**
      * services icons component
@@ -13,20 +14,20 @@ const Services = () => {
             <p className='services'>our services</p>
             <div className='travel-icons'>
                 <div className='icon animate3'>
-                    <img src={Airplane} alt='' />
-                    <p>travel anywhere</p>
+                    <img src={Car} alt='' />
+                    <p>Car rental</p>
                 </div>
                 <div className='icon animate3'>
-                    <img src={Cruise} alt='' />
-                    <p>Cruise</p>
+                    <img src={Flight} alt='' />
+                    <p>Flight anywhere</p>
                 </div>
-                <div className='icon animate4'>
-                    <img src={Balloon} alt='' />
-                    <p>air balloon</p>
+                <div className='icon animate3'>
+                    <img src={Hotel} alt='' />
+                    <p>Hotel Reservation</p>
                 </div>
-                <div className='icon animate4'>
-                    <img src={Tropical} alt='' />
-                    <p>beautiful beaches</p>
+                <div className='icon animate3'>
+                    <img src={Trip} alt='' />
+                    <p>Trip Advising</p>
                 </div>
             </div>
         </div>
