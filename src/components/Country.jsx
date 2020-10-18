@@ -1,12 +1,16 @@
 import React, { useEffect, useState, useContext } from 'react';
 import City from './City';
-
 import '../styles/Form.scss';
 import { CountryContext } from './CountryContext';
 const Country = () => {
+    // sending country data to context api
     const [country, setCountry] = useContext(CountryContext);
+
+    // country and country id states
     const [countries, setCountries] = useState([]);
     const [countryId, setCountryId] = useState();
+
+    // calling fetch api for countries
     const getCountry = async () => {
         const URL = `http://46.101.108.59/api/countries`;
         const PROXY = `https://cors-anywhere.herokuapp.com/`;
@@ -16,13 +20,17 @@ const Country = () => {
             .then((data) => setCountries(data.data));
     };
 
+    // calling country api when countryId changed
     useEffect(() => {
         getCountry();
     }, [countryId]);
+
+    // setting country id based on selection
     const setSelect = (id) => {
         setCountryId(id);
     };
 
+    // getting the country name by id selected to send through context api
     const getCountryById = () => {
         countries.map((country) => {
             if (country.id === countryId) {
@@ -32,6 +40,8 @@ const Country = () => {
             }
         });
     };
+
+    // calling get country by id when country id changed
     useEffect(() => {
         getCountryById();
     }, [countryId]);

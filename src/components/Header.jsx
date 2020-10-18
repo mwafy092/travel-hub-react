@@ -1,6 +1,9 @@
 import React from 'react';
 import '../styles/Header.scss';
 const Header = () => {
+    /**
+     * header component
+     */
     return (
         <div className='header'>
             <h1>What is your next destination?!</h1>

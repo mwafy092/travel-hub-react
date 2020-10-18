@@ -1,0 +1,48 @@
+.services {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem 0 0;
+    color: #f16745;
+    font-weight: 900;
+    z-index: 90;
+}
+.travel-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem 1rem;
+    .icon {
+        z-index: 80;
+        text-align: center;
+        margin: 0 3rem;
+        img {
+            width: 50px;
+        }
+        p {
+            margin: 0.5rem 0;
+            color: #f35d38;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .services {
+        font-size: 1.2rem;
+    }
+    .travel-icons {
+        margin: 1rem 0;
+        .icon {
+            margin: 0;
+            img {
+                width: 40px;
+            }
+            p {
+                font-size: 0.8rem;
+                width: 50px;
+            }
+        }
+    }
+}

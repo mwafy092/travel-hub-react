@@ -3,13 +3,16 @@ import Nav from './Nav';
 import Header from './Header';
 import Country from './Country';
 import Photos from './Photos';
+import Services from './Services';
 import '../styles/App.scss';
-import Airplane from './assets/airplane-travel.svg';
-import Balloon from './assets/hot-air-balloon.svg';
-import Tropical from './assets/tropical.svg';
-import Cruise from './assets/cruise.svg';
 import { CountryProvider } from './CountryContext';
+import Robot from './assets/error.svg';
+import Linkedin from './assets/linkedin.svg';
 const App = () => {
+    /**
+     * This is the root component
+     * all components included inside context api provider calling CountryProvider
+     */
     return (
         <CountryProvider>
             <div className='app'>
@@ -17,26 +20,7 @@ const App = () => {
                 <Header />
 
                 <div className='container'>
-                    <p className='services'>our services</p>
-                    <div className='travel-icons'>
-                        <div className='icon'>
-                            <img src={Airplane} alt='' />
-                            <p>travel anywhere</p>
-                        </div>
-                        <div className='icon'>
-                            <img src={Cruise} alt='' />
-                            <p>Cruise</p>
-                        </div>
-                        <div className='icon'>
-                            <img src={Balloon} alt='' />
-                            <p>air balloon</p>
-                        </div>
-                        <div className='icon'>
-                            <img src={Tropical} alt='' />
-                            <p>beautiful beaches</p>
-                        </div>
-                    </div>
-
+                    <Services />
                     <div className='country-data'>
                         <div className='form'>
                             <Country />
@@ -51,6 +35,13 @@ const App = () => {
                     </button>
                     <div className='color-red'></div>
                     <div className='color-yellow'></div>
+                    <div className='robot'>
+                        <img src={Robot} alt='' />
+                        <a
+                            href='https://www.linkedin.com/in/mwafy/'
+                            target='_blank'
+                        ></a>
+                    </div>
                 </div>
 
                 <footer>Travel Hub Created By Mwafy @2020</footer>
