@@ -21,11 +21,11 @@ const Services = () => {
                     <img src={Flight} alt='' />
                     <p>Flight anywhere</p>
                 </div>
-                <div className='icon animate3'>
+                <div className='icon animate4'>
                     <img src={Hotel} alt='' />
                     <p>Hotel Reservation</p>
                 </div>
-                <div className='icon animate3'>
+                <div className='icon animate4'>
                     <img src={Trip} alt='' />
                     <p>Trip Advising</p>
                 </div>
