@@ -32,8 +32,8 @@ const App = () => {
                         <div className='form'>
                             <div className='user'>
                                 <p>
-                                    select country then city and if egypt select
-                                    area
+                                    you can use voice search and say "Search for
+                                    [country name]"
                                 </p>
                                 <img src={Robot} alt='' />
                             </div>
