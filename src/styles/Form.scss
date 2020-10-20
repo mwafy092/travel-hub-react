@@ -1,7 +1,6 @@
 .country,
 .city,
 .area {
-    z-index: 99;
     label,
     select {
         display: block;
@@ -38,5 +37,14 @@
             font-weight: 600;
             margin: 1rem 0;
         }
+    }
+    .selected-country {
+        color: #fff;
+        display: inline-block;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        background-color: #266654;
+        margin-bottom: 2rem;
     }
 }

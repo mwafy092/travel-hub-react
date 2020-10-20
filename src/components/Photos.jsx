@@ -18,7 +18,9 @@ const Photos = () => {
     // calling fetch api to get data related to photos
     const getPhotos = async () => {
         const API_KEY = `18025631-21fc69eb9242d4f0ccc554e3b`;
-        const _country = await country[0].country;
+        const _country = (await country[0].country)
+            ? await country[0].country
+            : 'italy';
         const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${_country}&image_type=photo&orientation=vertical`;
 
         const response = await fetch(URL)
@@ -35,7 +37,6 @@ const Photos = () => {
     useEffect(() => {
         getPhotos();
     }, [country]);
-
     // error handling for no photos option
     if (!photos[0] || !photos[1] || !photos[2]) {
         return (
@@ -44,8 +45,7 @@ const Photos = () => {
                 <p style={{ color: '#4EBA9A', fontWeight: '600' }}>
                     <i
                         className='fas fa-bomb'
-                        style={{ fontSize: '2rem', margin: '1rem' }}
-                    ></i>
+                        style={{ fontSize: '2rem', margin: '1rem' }}></i>
                     no photos to show
                 </p>
             </div>

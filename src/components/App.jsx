@@ -7,6 +7,7 @@ import Services from './Services';
 import '../styles/App.scss';
 import { CountryProvider } from './CountryContext';
 import Robot from './assets/error.svg';
+import Alan from './Alan';
 const App = () => {
     /**
      * This is the root component
@@ -16,10 +17,15 @@ const App = () => {
     return (
         <CountryProvider>
             <div className='app'>
+                {/* header component */}
                 <Nav />
+                {/* header component */}
                 <Header />
 
                 <div className='container'>
+                    <div className='color-red'></div>
+                    <div className='color-yellow'></div>
+                    {/* services component */}
                     <Services />
 
                     <div className='country-data'>
@@ -31,25 +37,27 @@ const App = () => {
                                 </p>
                                 <img src={Robot} alt='' />
                             </div>
+                            {/* country component */}
                             <Country />
                         </div>
                         <div className='images'>
+                            {/* photos component */}
                             <Photos />
                         </div>
                     </div>
 
                     <a
                         href='mailto:mwafy092@gmail.com?subject=Trip Reservation'
-                        target='_blank'
-                    >
+                        target='_blank'>
                         <button>
                             <span>Book now</span>
                             <i className='fas fa-money-bill-wave'></i>
                         </button>
                     </a>
-                    <div className='color-red'></div>
-                    <div className='color-yellow'></div>
                 </div>
+
+                {/* intergrate alan voice AI */}
+                <Alan />
                 <footer>Travel Hub Created By Mwafy @2020</footer>
             </div>
         </CountryProvider>
